@@ -1,4 +1,5 @@
-﻿using QLBanHang.GUI;
+﻿using QLBanHang.Data;
+using QLBanHang.GUI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace QLBanHang
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMain(new Data.NHANVIEN()));
+            Application.Run(new FrmMain(new NHANVIEN()));
         }
     }
 }
