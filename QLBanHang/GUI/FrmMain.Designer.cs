@@ -96,7 +96,7 @@
             this.txtDangXuat.TabStop = true;
             this.txtDangXuat.Text = "Đăng xuất";
             this.txtDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-         //   this.txtDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtDangXuat_LinkClicked);
+            this.txtDangXuat.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtDangXuat_LinkClicked);
             // 
             // txtDoiMatKhau
             // 
@@ -109,7 +109,7 @@
             this.txtDoiMatKhau.TabStop = true;
             this.txtDoiMatKhau.Text = "Đổi mật khẩu";
             this.txtDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-         //   this.txtDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtDoiMatKhau_LinkClicked);
+          //  this.txtDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtDoiMatKhau_LinkClicked);
             // 
             // txtTTNhanVien
             // 
@@ -124,7 +124,7 @@
             this.txtTTNhanVien.Size = new System.Drawing.Size(415, 28);
             this.txtTTNhanVien.TabIndex = 0;
             this.txtTTNhanVien.Text = "Phạm Thị Quỳnh - Nhân viên";
-          this.txtTTNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtTTNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelMenu
             // 
@@ -166,7 +166,7 @@
             this.btnQLKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLKho.UseVisualStyleBackColor = false;
-          //  this.btnQLKho.Click += new System.EventHandler(this.btnQLKho_Click);
+         //   this.btnQLKho.Click += new System.EventHandler(this.btnQLKho_Click);
             // 
             // btnXuatHang
             // 
@@ -191,7 +191,7 @@
             this.btnXuatHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXuatHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHang.UseVisualStyleBackColor = false;
-           // this.btnXuatHang.Click += new System.EventHandler(this.btnXuatHang_Click);
+         //   this.btnXuatHang.Click += new System.EventHandler(this.btnXuatHang_Click);
             // 
             // btnTheLoai
             // 
@@ -215,7 +215,7 @@
             this.btnTheLoai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTheLoai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTheLoai.UseVisualStyleBackColor = false;
-         //   this.btnTheLoai.Click += new System.EventHandler(this.btnTheLoai_Click);
+          //  this.btnTheLoai.Click += new System.EventHandler(this.btnTheLoai_Click);
             // 
             // btnQLNXB
             // 
@@ -263,7 +263,7 @@
             this.btnQuanLySACH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQuanLySACH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQuanLySACH.UseVisualStyleBackColor = false;
-         //   this.btnQuanLySACH.Click += new System.EventHandler(this.btnQuanLySACH_Click);
+           // this.btnQuanLySACH.Click += new System.EventHandler(this.btnQuanLySACH_Click);
             // 
             // btnNhapHang
             // 
@@ -287,7 +287,7 @@
             this.btnNhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhapHang.UseVisualStyleBackColor = false;
-        //    this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
+            this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
             // 
             // btnQLNhanVien
             // 
@@ -311,7 +311,7 @@
             this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLNhanVien.UseVisualStyleBackColor = false;
-        //    this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
+          //  this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
             // 
             // FrmMain
             // 
