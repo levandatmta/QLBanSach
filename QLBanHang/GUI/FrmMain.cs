@@ -62,9 +62,60 @@ namespace QLBanHang.GUI
         #endregion
 
         #region sự kiện
-       
+        //private void btnQLNhanVien_Click(object sender, EventArgs e)
+        //{
+        //    FrmQuanLyNhanVien form = new FrmQuanLyNhanVien();
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
 
-     
+        //private void btnQLSACH_Click(object sender, EventArgs e)
+        //{
+        //    FrmQuanLyNXB form = new FrmQuanLyNXB();
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
+        private void btnQLKho_Click(object sender, EventArgs e)
+        {
+            FrmKho form = new FrmKho();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
+
+        //private void btnNhapHang_Click(object sender, EventArgs e)
+        //{
+        //    FrmNhapSACH form = new FrmNhapSACH(nv);
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
+
+        //private void btnXuatHang_Click(object sender, EventArgs e)
+        //{
+        //    FrmBanSACH form = new FrmBanSACH(nv);
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
+        
+        //private void txtDoiMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        //{
+        //    FrmDoiMatKhau form = new FrmDoiMatKhau(nv);
+        //    form.ShowDialog();
+        //}
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -75,6 +126,24 @@ namespace QLBanHang.GUI
             this.Close();
         }
 
-    
+        //private void btnQuanLySACH_Click(object sender, EventArgs e)
+        //{
+        //    FrmQuanLySACH form = new FrmQuanLySACH();
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
+
+        //private void btnTheLoai_Click(object sender, EventArgs e)
+        //{
+        //    FrmQuanLyTheLoai form = new FrmQuanLyTheLoai();
+        //    form.TopLevel = false;
+        //    form.Dock = DockStyle.Fill;
+        //    panelMain.Controls.Clear();
+        //    panelMain.Controls.Add(form);
+        //    form.Show();
+        //}
     }
 }
