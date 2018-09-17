@@ -76,11 +76,7 @@
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\FrmBanSach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\FrmBanSach.Designer.cs">
-      <DependentUpon>FrmBanSach.cs</DependentUpon>
+
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +98,7 @@
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\FrmBanSach.resx">
-      <DependentUpon>FrmBanSach.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

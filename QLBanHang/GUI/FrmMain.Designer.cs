@@ -166,7 +166,7 @@
             this.btnQLKho.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLKho.UseVisualStyleBackColor = false;
-           // this.btnQLKho.Click += new System.EventHandler(this.btnQLKho_Click);
+
             // 
             // btnXuatHang
             // 
@@ -191,7 +191,7 @@
             this.btnXuatHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnXuatHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHang.UseVisualStyleBackColor = false;
-            this.btnXuatHang.Click += new System.EventHandler(this.btnXuatHang_Click);
+
             // 
             // btnTheLoai
             // 
@@ -215,7 +215,7 @@
             this.btnTheLoai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnTheLoai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnTheLoai.UseVisualStyleBackColor = false;
-           // this.btnTheLoai.Click += new System.EventHandler(this.btnTheLoai_Click);
+
             // 
             // btnQLNXB
             // 
@@ -239,7 +239,7 @@
             this.btnQLNXB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNXB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLNXB.UseVisualStyleBackColor = false;
-          //  this.btnQLNXB.Click += new System.EventHandler(this.btnQLSACH_Click);
+            this.btnQLNXB.Click += new System.EventHandler(this.btnQLSACH_Click);
             // 
             // btnQuanLySACH
             // 
@@ -263,8 +263,7 @@
             this.btnQuanLySACH.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQuanLySACH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQuanLySACH.UseVisualStyleBackColor = false;
-           // this.btnQuanLySACH.Click += new System.EventHandler(this.btnQuanLySACH_Click);
-            // 
+
             // btnNhapHang
             // 
             this.btnNhapHang.BackColor = System.Drawing.Color.White;
@@ -287,8 +286,7 @@
             this.btnNhapHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnNhapHang.UseVisualStyleBackColor = false;
-           // this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
-            // 
+
             // btnQLNhanVien
             // 
             this.btnQLNhanVien.BackColor = System.Drawing.Color.White;
@@ -311,7 +309,7 @@
             this.btnQLNhanVien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLNhanVien.UseVisualStyleBackColor = false;
-       //     this.btnQLNhanVien.Click += new System.EventHandler(this.btnQLNhanVien_Click);
+
             // 
             // FrmMain
             // 
