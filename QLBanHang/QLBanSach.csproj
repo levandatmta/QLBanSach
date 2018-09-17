@@ -76,6 +76,18 @@
     <Compile Include="GUI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FrmQuanLyNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNXB.Designer.cs">
+      <DependentUpon>FrmQuanLyNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLySACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLySACH.Designer.cs">
+      <DependentUpon>FrmQuanLySACH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report\dsRp.cs">
@@ -95,6 +107,12 @@
     <Compile Include="Service\DBService.cs" />
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLyNXB.resx">
+      <DependentUpon>FrmQuanLyNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLySACH.resx">
+      <DependentUpon>FrmQuanLySACH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

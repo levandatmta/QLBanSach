@@ -61,10 +61,18 @@ namespace QLBanHang.GUI
         }
         #endregion
 
-        #region sự kiện
-       
+        #region sự kiện       
 
-     
+        private void btnQLSACH_Click(object sender, EventArgs e)
+        {
+            FrmQuanLyNXB form = new FrmQuanLyNXB();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
+        
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -75,6 +83,15 @@ namespace QLBanHang.GUI
             this.Close();
         }
 
-    
+        private void btnQuanLySACH_Click(object sender, EventArgs e)
+        {
+            FrmQuanLySACH form = new FrmQuanLySACH();
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(form);
+            form.Show();
+        }
+
     }
 }
