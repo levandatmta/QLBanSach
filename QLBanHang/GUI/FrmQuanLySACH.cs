@@ -1,4 +1,4 @@
-﻿using QLBanHang.Data;
+using QLBanHang.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -204,6 +204,6 @@ namespace QLBanHang.GUI
         }
         #endregion
 
-       
+
     }
 }

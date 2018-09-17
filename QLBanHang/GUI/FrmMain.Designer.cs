@@ -109,7 +109,7 @@
             this.txtDoiMatKhau.TabStop = true;
             this.txtDoiMatKhau.Text = "Đổi mật khẩu";
             this.txtDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-       //     this.txtDoiMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.txtDoiMatKhau_LinkClicked);
+
             // 
             // txtTTNhanVien
             // 
@@ -239,7 +239,6 @@
             this.btnQLNXB.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnQLNXB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnQLNXB.UseVisualStyleBackColor = false;
-            this.btnQLNXB.Click += new System.EventHandler(this.btnQLSACH_Click);
             // 
             // btnQuanLySACH
             // 

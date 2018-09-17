@@ -62,14 +62,6 @@ namespace QLBanHang.GUI
         #endregion
 
 
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            panelMain.Controls.Clear();
-            panelMain.Controls.Add(form);
-            form.Show();
-        }
-        
-
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
