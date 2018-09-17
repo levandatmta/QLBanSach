@@ -192,7 +192,6 @@
             this.btnXuatHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnXuatHang.UseVisualStyleBackColor = false;
 
-            // 
             // btnTheLoai
             // 
             this.btnTheLoai.BackColor = System.Drawing.Color.White;
