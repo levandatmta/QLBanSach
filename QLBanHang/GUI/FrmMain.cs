@@ -63,7 +63,6 @@ namespace QLBanHang.GUI
 
         #region sự kiện
        
-       
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -84,14 +83,6 @@ namespace QLBanHang.GUI
             form.Show();
         }
 
-        //private void btnTheLoai_Click(object sender, EventArgs e)
-        //{
-        //    FrmQuanLyTheLoai form = new FrmQuanLyTheLoai();
-        //    form.TopLevel = false;
-        //    form.Dock = DockStyle.Fill;
-        //    panelMain.Controls.Clear();
-        //    panelMain.Controls.Add(form);
-        //    form.Show();
-        //}
+       
     }
 }

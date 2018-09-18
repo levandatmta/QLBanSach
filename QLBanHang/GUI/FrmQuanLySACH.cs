@@ -210,7 +210,68 @@ namespace QLBanHang.GUI
             LoadDgvNhanVien();
         }
 
-      
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (btnThem.Text == "Thêm")
+            {
+
+                btnThem.Text = "Lưu";
+                btnSua.Enabled = false;
+                btnXoa.Text = "Hủy";
+
+                groupThongTin.Enabled = true;
+                dgvSACH.Enabled = false;
+
+                btnTimKiem.Enabled = false;
+                txtTimKiem.Enabled = false;
+
+                ClearControl();
+
+                return;
+            }
+
+            if (btnThem.Text == "Lưu")
+            {
+                if (Check())
+                {
+
+                    btnThem.Text = "Thêm";
+                    btnSua.Enabled = true;
+                    btnXoa.Text = "Xóa";
+
+                    groupThongTin.Enabled = false;
+                    dgvSACH.Enabled = true;
+
+                    btnTimKiem.Enabled = true;
+                    txtTimKiem.Enabled = true;
+
+                    try
+                    {
+                        SACH tg = getSACHByForm();
+                        db.SACHes.Add(tg);
+                        db.SaveChanges();
+
+                        KHO kho = new KHO();
+                        kho.SACHID = tg.ID;
+                        kho.SOLUONG = 0;
+                        db.KHOes.Add(kho);
+                        db.SaveChanges();
+
+                        MessageBox.Show("Thêm thông tin sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show("Thêm thông tin sách thất bại\n"+ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                    LoadDgvNhanVien();
+                }
+
+                return;
+            }
+        }
+
+        
         #endregion
     }
 }
