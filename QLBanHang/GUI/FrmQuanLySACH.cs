@@ -271,6 +271,69 @@ namespace QLBanHang.GUI
             }
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            SACH tg = getSACHByID();
+            if (tg.ID == 0)
+            {
+                MessageBox.Show("Chưa có thông tin sách nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (btnSua.Text == "Sửa")
+            {
+                btnSua.Text = "Lưu";
+                btnThem.Enabled = false;
+                btnXoa.Text = "Hủy";
+
+                groupThongTin.Enabled = true;
+                dgvSACH.Enabled = false;
+
+                btnTimKiem.Enabled = false;
+                txtTimKiem.Enabled = false;
+                return;
+            }
+
+            if (btnSua.Text == "Lưu")
+            {
+                if (Check())
+                {
+                    btnSua.Text = "Sửa";
+                    btnThem.Enabled = true;
+                    btnXoa.Text = "Xóa";
+
+                    groupThongTin.Enabled = false;
+                    dgvSACH.Enabled = true;
+
+                    btnTimKiem.Enabled = true;
+                    txtTimKiem.Enabled = true;
+
+                    SACH tgs = getSACHByForm();
+                    tg.MASACH = tgs.MASACH;
+                    tg.TEN = tgs.TEN;
+                    tg.TACGIA = tgs.TACGIA;
+                    tg.GHICHU = tgs.GHICHU;
+                    tg.NXBID = tgs.NXBID;
+                    tg.GIABAN = tgs.GIABAN;
+                    tg.THELOAIID = tgs.THELOAIID;
+                    
+                    try
+                    {
+                        db.SaveChanges();
+                        MessageBox.Show("Sửa thông tin sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Sửa thông tin sách thất bại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    LoadDgvNhanVien();
+                }
+
+                return;
+            }
+        }
+
         
         #endregion
     }

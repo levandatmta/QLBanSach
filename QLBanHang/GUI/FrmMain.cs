@@ -62,7 +62,7 @@ namespace QLBanHang.GUI
         #endregion
 
         #region sự kiện
-       
+        
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -83,6 +83,6 @@ namespace QLBanHang.GUI
             form.Show();
         }
 
-       
+        
     }
 }
