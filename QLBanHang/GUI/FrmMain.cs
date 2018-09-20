@@ -62,7 +62,8 @@ namespace QLBanHang.GUI
         #endregion
 
         #region sự kiện
-       
+      
+
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
             FrmNhapSACH form = new FrmNhapSACH(nv);
@@ -73,7 +74,6 @@ namespace QLBanHang.GUI
             form.Show();
         }
 
-       
         #endregion
 
         private void txtDangXuat_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -84,6 +84,5 @@ namespace QLBanHang.GUI
             this.Close();
         }
 
-       
     }
 }

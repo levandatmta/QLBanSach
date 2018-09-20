@@ -221,7 +221,7 @@
             this.btnXoaChiTietNhap.TabIndex = 12;
             this.btnXoaChiTietNhap.Text = "Xóa";
             this.btnXoaChiTietNhap.UseVisualStyleBackColor = false;
-      //      this.btnXoaChiTietNhap.Click += new System.EventHandler(this.btnXoaChiTietNhap_Click);
+            this.btnXoaChiTietNhap.Click += new System.EventHandler(this.btnXoaChiTietNhap_Click);
             // 
             // btnSuaChiTietNhap
             // 
@@ -235,7 +235,7 @@
             this.btnSuaChiTietNhap.TabIndex = 11;
             this.btnSuaChiTietNhap.Text = "Sửa";
             this.btnSuaChiTietNhap.UseVisualStyleBackColor = false;
-       //     this.btnSuaChiTietNhap.Click += new System.EventHandler(this.btnSuaChiTietNhap_Click);
+            this.btnSuaChiTietNhap.Click += new System.EventHandler(this.btnSuaChiTietNhap_Click);
             // 
             // btnThemChiTietNhap
             // 
@@ -249,7 +249,7 @@
             this.btnThemChiTietNhap.TabIndex = 10;
             this.btnThemChiTietNhap.Text = "Thêm";
             this.btnThemChiTietNhap.UseVisualStyleBackColor = false;
-       //     this.btnThemChiTietNhap.Click += new System.EventHandler(this.btnThemChiTietNhap_Click);
+            this.btnThemChiTietNhap.Click += new System.EventHandler(this.btnThemChiTietNhap_Click);
             // 
             // groupThongTinChiTietNhap
             // 
@@ -506,7 +506,7 @@
             this.btnXoaPhieuNhap.TabIndex = 12;
             this.btnXoaPhieuNhap.Text = "Xóa";
             this.btnXoaPhieuNhap.UseVisualStyleBackColor = false;
-       //     this.btnXoaPhieuNhap.Click += new System.EventHandler(this.btnXoaPhieuNhap_Click);
+            this.btnXoaPhieuNhap.Click += new System.EventHandler(this.btnXoaPhieuNhap_Click);
             // 
             // btnSuaPhieuNhap
             // 
