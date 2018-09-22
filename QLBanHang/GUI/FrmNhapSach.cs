@@ -36,7 +36,7 @@ namespace QLBanHang.GUI
         #endregion
 
         #region Phiếu nhập
-
+// fofm phieu nhap
         #region Load
         private void LoadInitControl()
         {
