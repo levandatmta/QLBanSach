@@ -334,7 +334,7 @@ namespace QLBanHang.GUI
             }
         }
 
-        
+       
         #endregion
     }
 }
