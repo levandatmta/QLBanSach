@@ -225,7 +225,7 @@
             this.btnXoaChiTietBan.TabIndex = 12;
             this.btnXoaChiTietBan.Text = "Xóa";
             this.btnXoaChiTietBan.UseVisualStyleBackColor = false;
-           // this.btnXoaChiTietBan.Click += new System.EventHandler(this.btnXoaChiTietBan_Click);
+          //  this.btnXoaChiTietBan.Click += new System.EventHandler(this.btnXoaChiTietBan_Click);
             // 
             // btnSuaChiTietBan
             // 
@@ -239,7 +239,7 @@
             this.btnSuaChiTietBan.TabIndex = 11;
             this.btnSuaChiTietBan.Text = "Sửa";
             this.btnSuaChiTietBan.UseVisualStyleBackColor = false;
-      //      this.btnSuaChiTietBan.Click += new System.EventHandler(this.btnSuaChiTietBan_Click);
+            this.btnSuaChiTietBan.Click += new System.EventHandler(this.btnSuaChiTietBan_Click);
             // 
             // btnThemChiTietBan
             // 
@@ -253,7 +253,7 @@
             this.btnThemChiTietBan.TabIndex = 10;
             this.btnThemChiTietBan.Text = "Thêm";
             this.btnThemChiTietBan.UseVisualStyleBackColor = false;
-     //       this.btnThemChiTietBan.Click += new System.EventHandler(this.btnThemChiTietBan_Click);
+            this.btnThemChiTietBan.Click += new System.EventHandler(this.btnThemChiTietBan_Click);
             // 
             // groupThongTinChiTietBan
             // 
@@ -512,7 +512,7 @@
             this.btnInHoaDon.TabIndex = 13;
             this.btnInHoaDon.Text = "In hóa đơn";
             this.btnInHoaDon.UseVisualStyleBackColor = false;
-  //          this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
             // 
             // btnXoaHoaDonBan
             // 
@@ -526,7 +526,7 @@
             this.btnXoaHoaDonBan.TabIndex = 12;
             this.btnXoaHoaDonBan.Text = "Xóa";
             this.btnXoaHoaDonBan.UseVisualStyleBackColor = false;
-         //   this.btnXoaHoaDonBan.Click += new System.EventHandler(this.btnXoaHOADONBAN_Click);
+            this.btnXoaHoaDonBan.Click += new System.EventHandler(this.btnXoaHOADONBAN_Click);
             // 
             // btnSuaHoaDonBan
             // 
@@ -540,7 +540,7 @@
             this.btnSuaHoaDonBan.TabIndex = 11;
             this.btnSuaHoaDonBan.Text = "Sửa";
             this.btnSuaHoaDonBan.UseVisualStyleBackColor = false;
-      //      this.btnSuaHoaDonBan.Click += new System.EventHandler(this.btnSuaHOADONBAN_Click);
+            this.btnSuaHoaDonBan.Click += new System.EventHandler(this.btnSuaHOADONBAN_Click);
             // 
             // btnThemHoaDonBan
             // 
@@ -554,7 +554,7 @@
             this.btnThemHoaDonBan.TabIndex = 10;
             this.btnThemHoaDonBan.Text = "Thêm";
             this.btnThemHoaDonBan.UseVisualStyleBackColor = false;
-       //     this.btnThemHoaDonBan.Click += new System.EventHandler(this.btnThemHOADONBAN_Click);
+            this.btnThemHoaDonBan.Click += new System.EventHandler(this.btnThemHOADONBAN_Click);
             // 
             // groupThongTinHoaDonBan
             // 
@@ -643,7 +643,7 @@
             this.btnTraSach.TabIndex = 13;
             this.btnTraSach.Text = "Trả sách";
             this.btnTraSach.UseVisualStyleBackColor = false;
-       //     this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
+     //       this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
             // 
             // numSoLuong
             // 
