@@ -18,6 +18,14 @@ namespace QLBanHang.Report
 
         private QLBanSACH_DbContext db = Service.DBService.db;
 
+        #region constructor
+        public FrmRpInHoaDon(HOADONBAN z)
+        {
+            InitializeComponent();
+            Service.DBService.Reload();
+            hd = z;
+        }
+        #endregion
 
         #region LoadForm
         private void FrmRpInHoaDon_Load(object sender, EventArgs e)
