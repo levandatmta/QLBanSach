@@ -334,7 +334,63 @@ namespace QLBanHang.GUI
             }
         }
 
-       
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (btnXoa.Text == "Xóa")
+            {
+                SACH tg = getSACHByID();
+                if (tg.ID == 0)
+                {
+                    MessageBox.Show("Chưa có đầu sách nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thông tin đầu sách này?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.Cancel) return;
+
+                try 
+                {
+                    db.KHOes.RemoveRange(db.KHOes.Where(p => p.SACHID == tg.ID));
+                    db.CHITIETNHAPs.RemoveRange(db.CHITIETNHAPs.Where(p => p.SACHID == tg.ID));
+                    db.CHITIETXUATs.RemoveRange(db.CHITIETXUATs.Where(p => p.SACHID == tg.ID));
+                    db.SaveChanges();
+
+                    db.SACHes.Remove(tg);
+                    db.SaveChanges();
+
+
+                    MessageBox.Show("Xóa thông tin đầu sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa thông tin đầu sách thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoadDgvNhanVien();
+
+                return;
+            }
+
+            if (btnXoa.Text == "Hủy")
+            {
+                btnXoa.Text = "Xóa";
+                btnThem.Text = "Thêm";
+                btnSua.Text = "Sửa";
+
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+
+                groupThongTin.Enabled = false;
+                dgvSACH.Enabled = true;
+
+                btnTimKiem.Enabled = true;
+                txtTimKiem.Enabled = true;
+
+                UpdateDetail();
+
+                return;
+            }
+        }
         #endregion
     }
 }

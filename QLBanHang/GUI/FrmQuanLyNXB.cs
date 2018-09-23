@@ -265,7 +265,62 @@ namespace QLBanHang.GUI
             }
         }
 
-       
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (btnXoa.Text == "Xóa")
+            {
+                NXB tg = getNXBByID();
+                if (tg.ID == 0)
+                {
+                    MessageBox.Show("Chưa có nhà xuất bản nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thông tin nhà xuất bản này?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.Cancel) return;
+
+                try 
+                {
+
+                    var listSach = db.SACHes.Where(p => p.NXBID == tg.ID).ToList();
+                    foreach (var item in listSach) XoaSach(item);
+
+                    db.NXBs.Remove(tg);
+                    db.SaveChanges();
+
+
+                    MessageBox.Show("Xóa thông tin nhà xuất bản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa thông tin nhà xuất bản thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoadDgvNhanVien();
+
+                return;
+            }
+
+            if (btnXoa.Text == "Hủy")
+            {
+                btnXoa.Text = "Xóa";
+                btnThem.Text = "Thêm";
+                btnSua.Text = "Sửa";
+
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+
+                groupThongTin.Enabled = false;
+                dgvNXB.Enabled = true;
+
+                btnTimKiem.Enabled = true;
+                txtTimKiem.Enabled = true;
+
+                UpdateDetail();
+
+                return;
+            }
+        }
         #endregion
     }
 }
