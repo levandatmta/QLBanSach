@@ -247,7 +247,117 @@ namespace QLBanHang.GUI
             }
         }
 
-       
+        private void btnSuaPhieuNhap_Click(object sender, EventArgs e)
+        {
+            PHIEUNHAP tg = getPhieuNhapByID();
+            if (tg.ID == 0)
+            {
+                MessageBox.Show("Chưa có phiếu nhập nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (btnSuaPhieuNhap.Text == "Sửa")
+            {
+                btnSuaPhieuNhap.Text = "Lưu";
+                btnThemPhieuNhap.Enabled = false;
+                btnXoaPhieuNhap.Text = "Hủy";
+
+                groupThongTinPhieuNhap.Enabled = true;
+                dgvPhieuNhap.Enabled = false;
+
+                panelChiTietNhap.Enabled = false;
+
+                return;
+            }
+
+            if (btnSuaPhieuNhap.Text == "Lưu")
+            {
+                if (CheckPhieuNhap())
+                {
+                    btnSuaPhieuNhap.Text = "Sửa";
+                    btnThemPhieuNhap.Enabled = true;
+                    btnXoaPhieuNhap.Text = "Xóa";
+
+                    groupThongTinPhieuNhap.Enabled = false;
+                    dgvPhieuNhap.Enabled = true;
+
+                    panelChiTietNhap.Enabled = true;
+
+                    PHIEUNHAP tgs = getPhieuNhapByForm();
+                    tg.NHANVIENID = tgs.NHANVIENID;
+                    tg.NGAY = tgs.NGAY;
+                    tg.DIADIEM = tgs.DIADIEM;
+                    tg.TONGTIEN = tgs.TONGTIEN;
+
+                    try
+                    {
+                        db.SaveChanges();
+                        MessageBox.Show("Sửa thông tin phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Sửa thông tin phiếu nhập thất bại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    LoadDgvPhieuNhap();
+                }
+
+                return;
+            }
+        }
+
+        private void btnXoaPhieuNhap_Click(object sender, EventArgs e)
+        {
+            if (btnXoaPhieuNhap.Text == "Xóa")
+            {
+                PHIEUNHAP tg = getPhieuNhapByID();
+                if (tg.ID == 0)
+                {
+                    MessageBox.Show("Chưa có phiếu nhập nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thông tin phiếu nhập này?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.Cancel) return;
+
+                try
+                {
+                    db.CHITIETNHAPs.RemoveRange(db.CHITIETNHAPs.Where(p => p.PHIEUNHAPID == tg.ID));
+                    db.SaveChanges();
+
+                    db.PHIEUNHAPs.Remove(tg);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa phiếu nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa phiếu nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoadDgvPhieuNhap();
+
+                return;
+            }
+
+            if (btnXoaPhieuNhap.Text == "Hủy")
+            {
+                btnXoaPhieuNhap.Text = "Xóa";
+                btnThemPhieuNhap.Text = "Thêm";
+                btnSuaPhieuNhap.Text = "Sửa";
+
+                btnThemPhieuNhap.Enabled = true;
+                btnSuaPhieuNhap.Enabled = true;
+
+                groupThongTinPhieuNhap.Enabled = false;
+                dgvPhieuNhap.Enabled = true;
+
+                panelChiTietNhap.Enabled = true;
+
+                UpdateDetailPhieuNhap();
+
+                return;
+            }
+        }
 
         #endregion
 
@@ -430,7 +540,254 @@ namespace QLBanHang.GUI
 
         #endregion
 
-      
+        #region Sự kiện
+        private void btnThemChiTietNhap_Click(object sender, EventArgs e)
+        {
+            
+
+            if (btnThemChiTietNhap.Text == "Thêm")
+            {
+
+                // kiểm tra quyền của nhân viên
+                PHIEUNHAP z = getPhieuNhapByID();
+                if (z.ID == 0)
+                {
+                    MessageBox.Show("Chưa có phiếu nhập nào được lựa chọn",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                NHANVIEN nvtg = db.NHANVIENs.Where(p => p.ID == z.NHANVIENID).FirstOrDefault();
+
+                if (nv.QUYEN == 0 && nv.ID != nvtg.ID)
+                {
+                    // nếu nhân viên không phải là admin và không phải nhân viên nhập phiếu thì thông báo
+                    MessageBox.Show("Bạn không có quyền thêm chi tiết nhập\nChỉ quản trị và nhân viên nhập phiếu mới có quyền thêm chi tiết nhập",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                btnThemChiTietNhap.Text = "Lưu";
+                btnSuaChiTietNhap.Enabled = false;
+                btnXoaChiTietNhap.Text = "Hủy";
+
+                groupThongTinChiTietNhap.Enabled = true;
+                dgvChiTietNhap.Enabled = false;
+
+                panelPhieuNhap.Enabled = false;
+
+                ClearControlChiTietNhap();
+
+                return;
+            }
+
+            if (btnThemChiTietNhap.Text == "Lưu")
+            {
+                if (CheckChiTietNhap())
+                {
+
+                    btnThemChiTietNhap.Text = "Thêm";
+                    btnSuaChiTietNhap.Enabled = true;
+                    btnXoaChiTietNhap.Text = "Xóa";
+
+                    groupThongTinChiTietNhap.Enabled = false;
+                    dgvChiTietNhap.Enabled = true;
+
+                    panelPhieuNhap.Enabled = true;
+
+
+                    try
+                    {
+                        CHITIETNHAP tg = getChiTietNhapByForm();
+                        db.CHITIETNHAPs.Add(tg);
+                        db.SaveChanges();
+
+                        KHO kho = db.KHOes.Where(p => p.SACHID == tg.SACHID).FirstOrDefault();
+                        kho.SOLUONG += tg.SOLUONG;
+                        db.SaveChanges();
+
+                        MessageBox.Show("Thêm thông tin Chi tiết nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Thêm thông tin Chi tiết nhập thất bại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+
+                    LoadDgvChiTietNhap();
+                    UpdateDetailPhieuNhap();
+                }
+
+                return;
+            }
+        }
+
+        private void btnSuaChiTietNhap_Click(object sender, EventArgs e)
+        {
+            // kiểm tra quyền của nhân viên
+            PHIEUNHAP z = getPhieuNhapByID();
+            if (z.ID == 0)
+            {
+                MessageBox.Show("Chưa có phiếu nhập nào được lựa chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            NHANVIEN nvtg = db.NHANVIENs.Where(p => p.ID == z.NHANVIENID).FirstOrDefault();
+
+            if (nv.QUYEN == 0 && nv.ID != nvtg.ID)
+            {
+                // nếu nhân viên không phải là admin và không phải nhân viên nhập phiếu thì thông báo
+                MessageBox.Show("Bạn không có quyền sửa chi tiết nhập\nChỉ quản trị và nhân viên nhập phiếu mới có quyền sửa chi tiết nhập",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // kiểm tra xem có chi tiết nhập nào được chọn k
+            CHITIETNHAP tg = getChiTietNhapByID();
+            if (tg.ID == 0)
+            {
+                MessageBox.Show("Chưa có Chi tiết nhập nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (btnSuaChiTietNhap.Text == "Sửa")
+            {
+                btnSuaChiTietNhap.Text = "Lưu";
+                btnThemChiTietNhap.Enabled = false;
+                btnXoaChiTietNhap.Text = "Hủy";
+
+                groupThongTinChiTietNhap.Enabled = true;
+                dgvChiTietNhap.Enabled = false;
+
+                panelPhieuNhap.Enabled = false;
+
+                return;
+            }
+
+            if (btnSuaChiTietNhap.Text == "Lưu")
+            {
+                if (CheckChiTietNhap())
+                {
+                    btnSuaChiTietNhap.Text = "Sửa";
+                    btnThemChiTietNhap.Enabled = true;
+                    btnXoaChiTietNhap.Text = "Xóa";
+
+                    groupThongTinChiTietNhap.Enabled = false;
+                    dgvChiTietNhap.Enabled = true;
+
+                    panelPhieuNhap.Enabled = true;
+
+                    CHITIETNHAP tgs = getChiTietNhapByForm();
+                    tg.SACHID = tgs.SACHID;
+                    tg.SOLUONG = tgs.SOLUONG;
+                    tg.DONGIA = tgs.DONGIA;
+                    tg.THANHTIEN = tgs.THANHTIEN;
+
+                    try
+                    {
+                        db.SaveChanges();
+                        MessageBox.Show("Sửa thông tin Chi tiết nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Sửa thông tin Chi tiết nhập thất bại\n" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    LoadDgvChiTietNhap();
+
+                    UpdateDetailPhieuNhap();
+                }
+
+                return;
+            }
+        }
+
+        private void btnXoaChiTietNhap_Click(object sender, EventArgs e)
+        {
+            if (btnXoaChiTietNhap.Text == "Xóa")
+            {
+                // kiểm tra quyền của nhân viên
+                PHIEUNHAP z = getPhieuNhapByID();
+                if (z.ID == 0)
+                {
+                    MessageBox.Show("Chưa có phiếu nhập nào được lựa chọn",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                NHANVIEN nvtg = db.NHANVIENs.Where(p => p.ID == z.NHANVIENID).FirstOrDefault();
+
+                if (nv.QUYEN == 0 && nv.ID != nvtg.ID)
+                {
+                    // nếu nhân viên không phải là admin và không phải nhân viên nhập phiếu thì thông báo
+                    MessageBox.Show("Bạn không có quyền xóa chi tiết nhập\nChỉ quản trị và nhân viên nhập phiếu mới có quyền xóa chi tiết nhập",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                // kiểm tra xem trong bảng có chi tiết nhập k
+                CHITIETNHAP tg = getChiTietNhapByID();
+                if (tg.ID == 0)
+                {
+                    MessageBox.Show("Chưa có Chi tiết nhập nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thông tin Chi tiết nhập này?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.Cancel) return;
+
+                try
+                {
+                    db.CHITIETNHAPs.Remove(tg);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa Chi tiết nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa Chi tiết nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoadDgvChiTietNhap();
+                UpdateDetailPhieuNhap();
+
+                return;
+            }
+
+            if (btnXoaChiTietNhap.Text == "Hủy")
+            {
+                btnXoaChiTietNhap.Text = "Xóa";
+                btnThemChiTietNhap.Text = "Thêm";
+                btnSuaChiTietNhap.Text = "Sửa";
+
+                btnThemChiTietNhap.Enabled = true;
+                btnSuaChiTietNhap.Enabled = true;
+
+                groupThongTinChiTietNhap.Enabled = false;
+                dgvChiTietNhap.Enabled = true;
+
+                panelPhieuNhap.Enabled = true;
+
+                UpdateDetailChiTietNhap();
+                
+
+                return;
+            }
+        }
+
+        #endregion
 
         #endregion
 
