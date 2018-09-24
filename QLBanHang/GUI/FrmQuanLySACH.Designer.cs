@@ -153,7 +153,6 @@
             this.btnThem.Size = new System.Drawing.Size(188, 42);
             this.btnThem.TabIndex = 6;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
 
             // 
             // groupThongTin
