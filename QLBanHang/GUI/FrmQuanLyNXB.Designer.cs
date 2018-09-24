@@ -64,7 +64,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-        //    this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label1
             // 
@@ -112,7 +112,7 @@
             this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
-         //   this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -126,7 +126,7 @@
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
-         //   this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -140,7 +140,7 @@
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
-       //     this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // groupThongTin
             // 
@@ -233,7 +233,7 @@
             this.dgvNXB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNXB.Size = new System.Drawing.Size(744, 621);
             this.dgvNXB.TabIndex = 3;
-         //   this.dgvNXB.SelectionChanged += new System.EventHandler(this.dgvNhanVien_SelectionChanged);
+            this.dgvNXB.SelectionChanged += new System.EventHandler(this.dgvNhanVien_SelectionChanged);
             // 
             // ID
             // 
