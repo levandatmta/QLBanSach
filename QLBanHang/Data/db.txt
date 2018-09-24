@@ -1,0 +1,159 @@
+﻿-- QL BAN SACH --
+GO
+	USE MASTER 
+GO
+	DROP DATABASE QLBANSACH
+GO
+	CREATE DATABASE QLBANSACH
+GO
+	USE QLBANSACH
+GO
+	CREATE TABLE NHANVIEN(
+		ID INT IDENTITY PRIMARY KEY,
+		MANV NVARCHAR(MAX),
+		TEN NVARCHAR(MAX),
+		NGAYSINH DATETIME,
+		GIOITINH INT, -- 1: NAM, 0 : NU
+		SDT NVARCHAR(MAX),
+		DIACHI NVARCHAR(MAX),
+		QUYEN INT,
+		MATKHAU NVARCHAR(MAX),
+		TAIKHOAN NVARCHAR(MAX)
+	)
+GO
+	CREATE TABLE NXB(
+		ID INT IDENTITY PRIMARY KEY,
+		TENNXB NVARCHAR(MAX)
+	)
+GO
+	CREATE TABLE THELOAI(
+		ID INT IDENTITY PRIMARY KEY,
+		TEN NVARCHAR(MAX)
+	)
+GO
+	CREATE TABLE SACH(
+		ID INT IDENTITY PRIMARY KEY,
+		MASACH NVARCHAR(MAX),
+		TEN NVARCHAR(MAX),
+		TACGIA NVARCHAR(MAX),
+		GHICHU NVARCHAR(MAX),
+		NXBID INT,
+			FOREIGN KEY (NXBID) REFERENCES NXB(ID),
+		THELOAIID INT,
+			FOREIGN KEY (THELOAIID) REFERENCES THELOAI(ID),
+		GIABAN INT
+	)
+GO
+	CREATE TABLE KHO(
+		ID INT IDENTITY PRIMARY KEY,
+		SACHID INT,
+			FOREIGN KEY (SACHID) REFERENCES SACH(ID),
+		SOLUONG INT
+	)
+GO
+	CREATE TABLE PHIEUNHAP(
+		ID INT IDENTITY PRIMARY KEY,
+		NHANVIENID INT,
+			FOREIGN KEY (NHANVIENID) REFERENCES NHANVIEN(ID),
+		NGAY DATETIME,
+		DIADIEM NVARCHAR(MAX),
+		TONGTIEN INT
+	)
+GO
+	CREATE TABLE CHITIETNHAP(
+		ID INT IDENTITY PRIMARY KEY,
+		PHIEUNHAPID INT,
+			FOREIGN KEY (PHIEUNHAPID) REFERENCES PHIEUNHAP(ID),
+		SACHID INT,
+			FOREIGN KEY (SACHID) REFERENCES SACH(ID),
+		SOLUONG INT,
+		DONGIA INT,
+		THANHTIEN INT
+	)
+GO
+	CREATE TABLE HOADONBAN(
+		ID INT IDENTITY PRIMARY KEY,
+		NHANVIENID INT,
+			FOREIGN KEY (NHANVIENID) REFERENCES NHANVIEN(ID),
+		NGAY DATETIME,
+		TONGTIEN INT
+	)
+GO
+	CREATE TABLE CHITIETXUAT(
+		ID INT IDENTITY PRIMARY KEY,
+		HOADONBANID INT,
+			FOREIGN KEY (HOADONBANID) REFERENCES HOADONBAN(ID),
+		SACHID INT,
+			FOREIGN KEY (SACHID) REFERENCES SACH(ID),
+		SOLUONG INT,
+		GIABAN INT,
+		THANHTIEN INT
+	)
+GO
+	-- THÊM DỮ LIỆU MẪU
+	INSERT INTO NHANVIEN(MANV, TEN, NGAYSINH, GIOITINH, SDT, DIACHI, QUYEN, MATKHAU, TAIKHOAN) 
+		VALUES('NV01',N'Tống Thị Hương', '8-30-1996', 0, '0912345678', N'Tam Hồng',1,'1', 'admin'),
+		('NV02',N'Dương Văn Minh', '9-3-1996', 1, '0912345678', N'Đồng Văn',0,'1','nv02') 
+GO
+	INSERT INTO NXB(TENNXB) 
+		VALUES(N'Nhà xuất bản Chính trị Quốc gia'),
+		(N'Nhà xuất bản Tư pháp'),
+		(N'Nhà xuất bản Hồng Đức'),
+		(N'Nhà xuất bản Quân đội'),
+		(N'Nhà xuất bản Công an nhân dân'),
+		(N'Nhà xuất bản Kim Đồng'),
+		(N'Nhà xuất bản Thanh niên'),
+		(N'Nhà xuất bản Lao động'),
+		(N'Nhà xuất bản Phụ nữ'),
+		(N'Nhà xuất bản Mỹ thuật'),
+		(N'Nhà xuất bản Sân khấu'),
+		(N'Nhà xuất bản Hội nhà văn'),
+		(N'Nhà xuất bản Lao động xã hội'),
+		(N'Nhà xuất bản Khoa học xã hội'),
+		(N'Nhà xuất bản Tôn giáo'),
+		(N'Nhà xuất bản Thông tấn'),
+		(N'Nhà xuất bản Bản đồ'),
+		(N'Nhà xuất bản Bưu điện'),
+		(N'Nhà xuất bản Giao thông'),
+		(N'Nhà xuất bản Khoa học và kỹ thuật'),
+		(N'Nhà xuất bản Khoa học tự nhiên và Công nghệ'),
+		(N'Nhà xuất bản Nông nghiệp'),
+		(N'Nhà xuất bản Tài chính'),
+		(N'Nhà xuất bản Thống kê'),
+		(N'Nhà xuất bản Thể dục thể thao'),
+		(N'Nhà xuất bản Y học'),
+		(N'Nhà xuất bản Xây dựng'),
+		(N'Nhà xuất bản Từ điển bách khoa'),
+		(N'Nhà xuất bản Tri thức'),
+		(N'Nhà xuất bản Thế giới'),
+		(N'Nhà xuất bản Âm nhạc'),
+		(N'Nhà xuất bản Văn học'),
+		(N'Nhà xuất bản Văn hoá dân tộc'),
+		(N'Nhà xuất bản Văn hoá - Thông tin'),
+		(N'Nhà xuất bản Lý luận chính trị'),
+		(N'Nhà xuất bản Đại học kinh tế quốc dân'),
+		(N'Nhà xuất bản Đại học Bách khoa Hà Nội'),
+		(N'Nhà xuất bản Đại học Huế'),
+		(N'Nhà xuất bản Đại học Quốc gia Hà Nội'),
+		(N'Nhà xuất bản Đại học sư phạm'),
+		(N'Nhà xuất bản Đại học Quốc gia thành phố Hồ Chí Minh'),
+		(N'Nhà xuất bản Giáo dục'),
+		(N'Nhà xuất bản Đại học Thái Nguyên'),
+		(N'Nhà xuất bản Hà Nội'),
+		(N'Nhà xuất bản Hải phòng'),
+		(N'Nhà xuất bản Thanh Hoá'),
+		(N'Nhà xuất bản Nghệ An'),
+		(N'Nhà xuất bản Thuận Hoá'),
+		(N'Nhà xuất bản Đà Nẵng'),
+		(N'Nhà xuất bản Văn hoá Sài gòn'),
+		(N'Nhà xuất bản Tổng hợp thành phố Hồ Chí Minh'),
+		(N'Nhà xuất bản Trẻ'),
+		(N'Nhà xuất bản Văn nghệ'),
+		(N'Nhà xuất bản Đồng Nai'),
+		(N'Nhà xuất bản Phương Đông')
+GO
+	INSERT INTO THELOAI(TEN) VALUES(N'Tình cảm'),
+								   (N'Tiểu thuyết'),
+								   (N'Ngoại ngữ'),
+								   (N'Truyện')
+GO
