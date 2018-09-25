@@ -1,0 +1,4 @@
+F:\GITHUB\QLBanSach\QLBanHang\bin\Debug\QLBanHang.exe.config
+F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanSach.csprojResolveAssemblyReference.cache
+F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanHang.exe
+F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanHang.pdb
