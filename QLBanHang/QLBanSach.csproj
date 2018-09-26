@@ -70,6 +70,24 @@
     <Compile Include="Data\QLBanSACH_DbContext.cs" />
     <Compile Include="Data\SACH.cs" />
     <Compile Include="Data\THELOAI.cs" />
+    <Compile Include="GUI\FrmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmDoiMatKhau.Designer.cs">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmKho.Designer.cs">
+      <DependentUpon>FrmKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +99,36 @@
     </Compile>
     <Compile Include="GUI\FrmBanSach.Designer.cs">
       <DependentUpon>FrmBanSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyTheLoai.Designer.cs">
+      <DependentUpon>FrmQuanLyTheLoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNXB.Designer.cs">
+      <DependentUpon>FrmQuanLyNXB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLySACH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLySACH.Designer.cs">
+      <DependentUpon>FrmQuanLySACH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmNhapSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmNhapSach.Designer.cs">
+      <DependentUpon>FrmNhapSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FrmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,11 +147,35 @@
       <DependentUpon>FrmRpInHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Service\DBService.cs" />
+    <EmbeddedResource Include="GUI\FrmDoiMatKhau.resx">
+      <DependentUpon>FrmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmKho.resx">
+      <DependentUpon>FrmKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FrmBanSach.resx">
       <DependentUpon>FrmBanSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLyTheLoai.resx">
+      <DependentUpon>FrmQuanLyTheLoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLyNXB.resx">
+      <DependentUpon>FrmQuanLyNXB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLySACH.resx">
+      <DependentUpon>FrmQuanLySACH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmNhapSach.resx">
+      <DependentUpon>FrmNhapSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FrmQuanLyNhanVien.resx">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

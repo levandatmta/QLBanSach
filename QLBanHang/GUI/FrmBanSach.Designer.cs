@@ -225,7 +225,7 @@
             this.btnXoaChiTietBan.TabIndex = 12;
             this.btnXoaChiTietBan.Text = "Xóa";
             this.btnXoaChiTietBan.UseVisualStyleBackColor = false;
-          //  this.btnXoaChiTietBan.Click += new System.EventHandler(this.btnXoaChiTietBan_Click);
+            this.btnXoaChiTietBan.Click += new System.EventHandler(this.btnXoaChiTietBan_Click);
             // 
             // btnSuaChiTietBan
             // 
@@ -643,7 +643,7 @@
             this.btnTraSach.TabIndex = 13;
             this.btnTraSach.Text = "Trả sách";
             this.btnTraSach.UseVisualStyleBackColor = false;
-     //       this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
             // 
             // numSoLuong
             // 

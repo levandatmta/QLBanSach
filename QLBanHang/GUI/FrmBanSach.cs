@@ -735,7 +735,155 @@ namespace QLBanHang.GUI
             }
         }
 
-      
+        private void btnXoaChiTietBan_Click(object sender, EventArgs e)
+        {
+            if (btnXoaChiTietBan.Text == "Xóa")
+            {
+                // kiểm tra quyền nhân viên
+                HOADONBAN z = getHOADONBANByID();
+
+                if (z.ID == 0)
+                {
+                    MessageBox.Show("Chưa có hóa đơn bán nào được chọn",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                NHANVIEN nvtg = db.NHANVIENs.Where(p => p.ID == z.NHANVIENID).FirstOrDefault();
+
+                if (nv.QUYEN == 0 && nv.ID != nvtg.ID)
+                {
+                    // nếu nhân viên không phải là admin và không phải nhân viên nhập phiếu thì thông báo
+                    MessageBox.Show("Bạn không có quyền thêm xóa chi tiết bán\nChỉ quản trị và nhân viên nhập phiếu mới có quyền xóa chi tiết nhập",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+
+                // kiểm tra xem co chi tiết bán nào được chọn k
+                CHITIETXUAT tg = getChiTietBanByID();
+                if (tg.ID == 0)
+                {
+                    MessageBox.Show("Chưa có Chi tiết bán nào được chọn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                DialogResult rs = MessageBox.Show("Bạn có chắc chắn xóa thông tin Chi tiết bán này?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (rs == DialogResult.Cancel) return;
+
+                try
+                {
+                    db.CHITIETXUATs.Remove(tg);
+                    db.SaveChanges();
+                    MessageBox.Show("Xóa Chi tiết bán thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Xóa Chi tiết bán thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoadDgvCHITIETXUAT();
+                UpdateDetailHOADONBAN();
+
+                return;
+            }
+
+            if (btnXoaChiTietBan.Text == "Hủy")
+            {
+                btnXoaChiTietBan.Text = "Xóa";
+                btnThemChiTietBan.Text = "Thêm";
+                btnSuaChiTietBan.Text = "Sửa";
+
+                btnThemChiTietBan.Enabled = true;
+                btnSuaChiTietBan.Enabled = true;
+
+                groupThongTinChiTietBan.Enabled = false;
+                dgvChiTietBan.Enabled = true;
+
+                panelHoaDonBan.Enabled = true;
+
+                UpdateDetailChiTietBan();
+                
+
+                return;
+            }
+        }
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            // kiểm tra quyền nhân viên
+            HOADONBAN z = getHOADONBANByID();
+
+            if (z.ID == 0)
+            {
+                MessageBox.Show("Chưa có hóa đơn bán nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            NHANVIEN nvtg = db.NHANVIENs.Where(p => p.ID == z.NHANVIENID).FirstOrDefault();
+
+            if (nv.QUYEN == 0 && nv.ID != nvtg.ID)
+            {
+                // nếu nhân viên không phải là admin và không phải nhân viên nhập phiếu thì thông báo
+                MessageBox.Show("Bạn không có quyền trả sách\nChỉ quản trị và nhân viên nhập phiếu mới có quyền trả sách",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // kiểm tra xem có chi tiết bán nào được chọn k
+            CHITIETXUAT tg = getChiTietBanByID();
+            if (tg.ID == 0)
+            {
+                MessageBox.Show("Chưa có chi tiết bán nào được chọn",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            if (numSoLuong.Value > tg.SOLUONG)
+            {
+                MessageBox.Show("Số lượng sách trả phải nhỏ hơn hoặc bằng số lượng trong đơn phiếu bán",
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                tg.SOLUONG -= (int)numSoLuong.Value;
+                tg.THANHTIEN = tg.SOLUONG * tg.GIABAN;
+
+                KHO zkho = db.KHOes.Where(p => p.SACHID == tg.SACHID).FirstOrDefault();
+                zkho.SOLUONG += (int) numSoLuong.Value;
+
+                if (tg.SOLUONG == 0) db.CHITIETXUATs.Remove(tg);
+                db.SaveChanges();
+
+                MessageBox.Show("Trả sách thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Trả sách thất bại\n" + ex.Message,
+                                "Thông báo",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            finally
+            {
+                UpdateDetailHOADONBAN();
+                LoadDgvCHITIETXUAT();
+            }
+        }
 
         #endregion
 

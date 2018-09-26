@@ -1,4 +1,78 @@
-F:\GITHUB\QLBanSach\QLBanHang\bin\Debug\QLBanHang.exe.config
-F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanSach.csprojResolveAssemblyReference.cache
-F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanHang.exe
-F:\GITHUB\QLBanSach\QLBanHang\obj\Debug\QLBanHang.pdb
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBanHang\QLBanHang\bin\Debug\QLBanHang.exe.config
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe.config
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanSach.csprojResolveAssemblyReference.cache
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmDoiMatKhau.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmKho.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmLogin.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmMain.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmBanSACH.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyTheLoai.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNXB.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLySACH.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmNhapSACH.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNhanVien.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.Report.FrmRpInHoaDon.resources
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanSach.csproj.GenerateResource.Cache
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\RdlCompile.cache
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\RdlCompile.compiled
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\QLBanHang.pdb
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\EntityFramework.dll
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\EntityFramework.xml
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.exe
+C:\Users\tang duong\Desktop\C#\BTLTTN\QLBansach\QLBanHang\obj\Debug\QLBanHang.pdb
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe.config
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.exe
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.pdb
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.pdb
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.dll
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.dll
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.xml
+G:\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.xml
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanSach.csprojResolveAssemblyReference.cache
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmDoiMatKhau.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmKho.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmLogin.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmMain.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmBanSACH.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyTheLoai.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNXB.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLySACH.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmNhapSACH.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNhanVien.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.Report.FrmRpInHoaDon.resources
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanSach.csproj.GenerateResource.Cache
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\RdlCompile.cache
+G:\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\RdlCompile.compiled
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe.config
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.exe
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.pdb
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.exe
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\QLBanHang.pdb
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.dll
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.xml
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmDoiMatKhau.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmKho.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmLogin.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmMain.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmBanSACH.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyTheLoai.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNXB.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLySACH.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmNhapSACH.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.GUI.FrmQuanLyNhanVien.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.Properties.Resources.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanHang.Report.FrmRpInHoaDon.resources
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\QLBanSach.csproj.GenerateResource.Cache
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\RdlCompile.cache
+C:\Users\Tran Cong Luan\Desktop\Thực tập nhóm\QLBansach\QLBanHang\obj\Debug\RdlCompile.compiled
